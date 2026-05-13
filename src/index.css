@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@source "../index.html";
+@source "./**/*.{js,ts,jsx,tsx}";
 
 /* ── Theme palettes ── values are space-separated RGB channels so Tailwind
    opacity modifiers (e.g. bg-cyber-accent/20) keep working. ── */
@@ -292,7 +293,9 @@ body {
 
 #root {
   overflow: hidden;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 code,

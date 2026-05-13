@@ -19,12 +19,13 @@ export const NavItem = React.memo(
           ? 'bg-cyber-elevated text-cyber-text'
           : 'bg-cyber-elevated text-cyber-text';
     return (
-      <div
+      <button
+        type="button"
         className={`flex items-center gap-3 p-2 cursor-pointer transition-colors rounded-lg font-medium ${
           active
             ? colorClasses
             : 'hover:bg-cyber-elevated/50 text-cyber-text-secondary hover:text-cyber-text'
-        }`}
+        } w-full text-left`}
         onClick={onClick}
       >
         {icon}
@@ -32,7 +33,7 @@ export const NavItem = React.memo(
         {badge && !active && (
           <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse flex-shrink-0" />
         )}
-      </div>
+      </button>
     );
   }
 );
